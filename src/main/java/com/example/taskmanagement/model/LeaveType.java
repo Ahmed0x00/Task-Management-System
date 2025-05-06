@@ -1,0 +1,33 @@
+package com.example.taskmanagement.model;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class LeaveType {
+
+    @JsonProperty("id")
+    private String id;
+
+    @JsonProperty("title")
+    private String title;
+
+    @JsonProperty("description")
+    private String description;
+
+    public LeaveType() {}
+
+    public LeaveType(String id, String title, String description) {
+        this.id = id;
+        this.title = title;
+        this.description = description;
+    }
+
+    // Getters and Setters
+    public String getId() { return id; }
+    public void setId(String id) { this.id = id; }
+
+    public String getTitle() { return title; }
+    public void setTitle(String title) { this.title = title; }
+
+    public String getDescription() { return description; }
+    public void setDescription(String description) { this.description = description; }
+}
