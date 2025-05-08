@@ -25,4 +25,12 @@ public class EmployeeController {
     public void loadManageLeaveTypesView() {
         ViewLoaderUtil.loadView(mainContent, "/com/example/taskmanagement/Employee/ManageLeaveTypes.fxml");
     }
+
+    public void loadViewRequests() {
+        ViewLoaderUtil.loadView(mainContent, "/com/example/taskmanagement/Employee/ViewRequests.fxml");
+    }
+
+    public void loadTimeCards() {
+        ViewLoaderUtil.loadView(mainContent, "/com/example/taskmanagement/Employee/ViewTimeCards.fxml");
+    }
 }

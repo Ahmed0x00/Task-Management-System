@@ -43,4 +43,20 @@ public class UserUtil {
     public static User getById(String id) {
         return JsonUtil.getOne(USER_FILE, TYPE, u -> u.getId().equals(id));
     }
+
+    public static String getEmployeeName(String employeeId) {
+        if (employeeId == null || employeeId.isEmpty()) {
+            System.out.println("EmployeeUtil.getEmployeeName: Invalid employeeId: " + employeeId);
+            return "Unknown";
+        }
+        String name = getAllUsers().stream()
+                .filter(user -> user.getEmployeeId() != null && user.getEmployeeId().equals(employeeId))
+                .map(User::getUsername)
+                .findFirst()
+                .orElse("Unknown");
+        if (name.equals("Unknown")) {
+            System.out.println("EmployeeUtil.getEmployeeName: No user found for employeeId: " + employeeId);
+        }
+        return name;
+    }
 }
