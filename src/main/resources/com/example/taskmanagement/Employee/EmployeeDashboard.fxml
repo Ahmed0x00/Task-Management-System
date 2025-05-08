@@ -14,6 +14,7 @@
         <Button text="Leave Types" onAction="#loadManageLeaveTypesView" />
         <Button text="Requests" onAction="#loadViewRequests"/>
         <Button text="Time Cards" onAction="#loadTimeCards"/>
+        <Button text="Calendar" onAction="#loadCalendar"/>
     </HBox>
     <StackPane fx:id="mainContent" minHeight="400" style="-fx-border-color: gray;">
         <Label text="Welcome to the Employee Dashboard" />

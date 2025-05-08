@@ -33,4 +33,8 @@ public class EmployeeController {
     public void loadTimeCards() {
         ViewLoaderUtil.loadView(mainContent, "/com/example/taskmanagement/Employee/ViewTimeCards.fxml");
     }
+
+    public void loadCalendar() {
+        ViewLoaderUtil.loadView(mainContent, "/com/example/taskmanagement/Employee/Calendar.fxml");
+    }
 }
