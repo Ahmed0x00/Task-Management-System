@@ -1,43 +1,17 @@
 package com.example.taskmanagement.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-
 public class Task {
-
-    @JsonProperty("id")
     private String id;
-
-    @JsonProperty("code")
     private String code;
-
-    @JsonProperty("title")
     private String title;
-
-    @JsonProperty("description")
     private String description;
-
-    @JsonProperty("assignedEmployeeId")
     private String assignedEmployeeId;
-
-    @JsonProperty("projectId")
     private String projectId;
-
-    @JsonProperty("phase")
-    private String phase; // Now stores TaskPhase ID
-
-    @JsonProperty("priority")
+    private String phase;
     private Priority priority;
-
-    @JsonProperty("creatorUserId")
     private String creatorUserId;
-
-    @JsonProperty("startDate")
     private String startDate;
-
-    @JsonProperty("endDate")
     private String endDate;
-
-    @JsonProperty("estimatedHours")
     private Double estimatedHours;
 
     public enum Priority { LOW, MEDIUM, HIGH }

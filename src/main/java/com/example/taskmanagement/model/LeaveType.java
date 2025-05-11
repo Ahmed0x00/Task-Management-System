@@ -1,16 +1,8 @@
 package com.example.taskmanagement.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-
 public class LeaveType {
-
-    @JsonProperty("id")
     private String id;
-
-    @JsonProperty("title")
     private String title;
-
-    @JsonProperty("description")
     private String description;
 
     public LeaveType() {}

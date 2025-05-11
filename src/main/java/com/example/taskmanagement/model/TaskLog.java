@@ -1,25 +1,11 @@
 package com.example.taskmanagement.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-
 public class TaskLog {
-
-    @JsonProperty("id")
     private String id;
-
-    @JsonProperty("taskName")
     private String taskName;
-
-    @JsonProperty("employee")
     private String employee;
-
-    @JsonProperty("startedAt")
     private String startedAt;
-
-    @JsonProperty("endedAt")
     private String endedAt;
-
-    @JsonProperty("timeSpent")
     private String timeSpent;
 
     public TaskLog() {}
