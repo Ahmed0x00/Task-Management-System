@@ -15,11 +15,6 @@ public class CustomerUtil {
         return JsonUtil.getAll(CUSTOMER_FILE, TYPE);
     }
 
-    public static Customer findByName(String name) {
-        Predicate<Customer> predicate = c -> c.getName().equalsIgnoreCase(name);
-        return JsonUtil.getOne(CUSTOMER_FILE, TYPE, predicate);
-    }
-
     public static void addCustomer(Customer customer) {
         JsonUtil.add(CUSTOMER_FILE, customer, TYPE);
     }

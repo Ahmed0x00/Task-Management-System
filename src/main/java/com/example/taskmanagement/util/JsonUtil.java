@@ -14,7 +14,7 @@ public class JsonUtil {
     public static <T> List<T> getAll(String path, TypeReference<List<T>> typeRef) {
         try {
             File file = new File(path);
-            if (!file.exists()) return new ArrayList<>();
+            if (!file.exists()) {return new ArrayList<>();}
             return mapper.readValue(file, typeRef);
         } catch (Exception e) {
             LoggerUtil.getLogger().severe("JSON Load Error: " + e.getMessage());
@@ -30,9 +30,9 @@ public class JsonUtil {
     }
 
     public static <T> void add(String path, T newObject, TypeReference<List<T>> typeRef) {
-        List<T> list = getAll(path, typeRef);
-        list.add(newObject);
-        saveList(path, list);
+        List<T> list = getAll(path, typeRef); // return all java objects in array
+        list.add(newObject); // add new object to this array
+        saveList(path, list); // save the list and put it in json
     }
 
     public static <T> void edit(String path, Predicate<T> matcher, T updatedObject, TypeReference<List<T>> typeRef) {

@@ -7,4 +7,13 @@
   "endDate" : "2025-05-16",
   "status" : "APPROVED",
   "reason" : "sick"
+}, {
+  "id" : 2,
+  "employeeId" : "9c632163-dd2f-4bfa-b95f-2491afb86f98",
+  "type" : "MISSION",
+  "leaveTypeId" : null,
+  "startDate" : "2025-05-21",
+  "endDate" : "2025-05-09",
+  "status" : "DENIED",
+  "reason" : "ffff"
 } ]

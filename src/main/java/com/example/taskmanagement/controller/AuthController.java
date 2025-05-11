@@ -26,7 +26,7 @@ public class AuthController {
             LoggerUtil.getLogger().info("Login successful: " + username);
             UserUtil.setLoggedInUser(user);
 
-            Role role = user.getRole();
+            Role role = user.getRole(); // ADMIN / LEADER
             String view = switch (role) {
                 case ADMIN -> "/com/example/taskmanagement/Admin/AdminDashboard.fxml";
                 case LEADER, EMPLOYEE -> "/com/example/taskmanagement/Employee/EmployeeDashboard.fxml";
@@ -36,7 +36,6 @@ public class AuthController {
             ViewLoaderUtil.loadView(rootPane, view);
 
         } else {
-            LoggerUtil.getLogger().warning("Login failed for user: " + username);
             errorLabel.setText("Invalid username or password.");
         }
     }
